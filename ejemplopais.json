@@ -1,0 +1,76 @@
+[{
+    "name": {
+      "common": "Argentina",
+      "official": "Argentine Republic",
+      "nativeName": {
+        "grn": {
+          "official": "Argentine Republic",
+          "common": "Argentina"
+        },
+        "spa": {
+          "official": "República Argentina",
+          "common": "Argentina"
+        }
+      }
+    },
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "ARS": {
+        "name": "Argentine peso",
+        "symbol": "$"
+      }
+    },
+    "capital": [
+      "Buenos Aires"
+    ],
+    "region": "Americas",
+    "subregion": "South America",
+    "languages": {
+      "grn": "Guaraní",
+      "spa": "Spanish"
+    },
+    "latlng": [
+      -34,
+      -64
+    ],
+    "landlocked": false,
+    "borders": [
+      "BOL",
+      "BRA",
+      "CHL",
+      "PRY",
+      "URY"
+    ],
+    "area": 2780400,
+    "flag": "🇦🇷",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/Z9DXNxhf2o93kvyc6",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/286393"
+    },
+    "population": 45376763,
+    "gini": {
+      "2019": 42.9
+    },
+    "fifa": "ARG",
+    "timezones": [
+      "UTC-03:00"
+    ],
+    "continents": [
+      "South America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/ar.png",
+      "svg": "https://flagcdn.com/ar.svg",
+      "alt": "The flag of Argentina features three equal horizontal bands of light blue, white and light blue. A brown-edged golden sun is centered in the white band."
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        -34.58,
+        -58.67
+      ]
+    },
+    "creador": "LFA"
+  }]

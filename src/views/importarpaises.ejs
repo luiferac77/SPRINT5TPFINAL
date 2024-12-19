@@ -1,0 +1,40 @@
+<main class="flex-grow container mx-auto px-4 py-8">
+    <div class="w-full">
+        <form action="/api/paises/importar" method="POST">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded focus:outline-none focus:ring focus:ring-blue-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                </svg>                  
+                <span>Importar</span>
+            </button>
+        </form>
+    </div>
+    <% if (paises && paises.length > 0) { %>
+        <section class="w-full">
+            <table class="w-full border-collapse border border-gray-300">
+                <thead class="bg-gray-200">
+                    <th class="border border-gray-300 p-2 text-gray-800">Nombre oficial</th>
+                    <th class="border border-gray-300 p-2 text-gray-800">Capital</th>
+                    <th class="border border-gray-300 p-2 text-gray-800">fronteras</th>
+                    <th class="border border-gray-300 p-2 text-gray-800">Área</th>
+                    <th class="border border-gray-300 p-2 text-gray-800">Población</th>
+                    <th class="border border-gray-300 p-2 text-gray-800">Índice Gini</th>
+                </thead>
+                <tbody>
+                    <% paises.forEach( pais => { %>
+                        <tr class="bg-white">
+                            <td class="border border-gray-300 p-2 text-gray-800"><%= pais.name.official %></td>
+                            <td class="border border-gray-300 p-2 text-gray-800"><%= pais.capital %></td>
+                            <td class="border border-gray-300 p-2 text-gray-800"><%= pais.borders %></td>
+                            <td class="border border-gray-300 p-2 text-gray-800"><%= pais.area %></td>
+                            <td class="border border-gray-300 p-2 text-gray-800"><%= pais.population %></td>
+                            <td class="border border-gray-300 p-2 text-gray-800"><%= pais.gini?.[2019] || 'N/A' %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </section>
+    <% } else { %>
+        <p>No hay paises para mostar</p>
+    <% } %>
+</main>

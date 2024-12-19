@@ -1,0 +1,112 @@
+<main class="flex-grow container mx-auto p-6">
+    <section>
+        <div>
+            <h2 class="text-3xl font-bold text-gray-900 p-4">Crear País</h2>
+        </div>
+        <form action="/api/paises/crear" method="POST" class="w-full max-w-lg mx-auto bg-white p-6 shadow-md rounded-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Agregar un Nuevo País</h2>
+        
+            <!-- Nombre oficial -->
+            <div class="mb-4">
+                <label for="name-official" class="block text-gray-700 font-medium">Nombre Oficial</label>
+                <input 
+                    type="text" 
+                    id="name-official" 
+                    name="name.official" 
+                    class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring focus:ring-blue-200"
+                    placeholder="Ejemplo: República Argentina"
+                />
+            </div>
+        
+            <!-- Capital -->
+            <div class="mb-4">
+                <label for="capital" class="block text-gray-700 font-medium">Capital</label>
+                <input 
+                    type="text" 
+                    id="capital" 
+                    name="capital" 
+                    class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring focus:ring-blue-200"
+                    placeholder="Ejemplo: Buenos Aires"
+                />
+                <small class="text-gray-500">Separar con comas si hay varias capitales.</small>
+            </div>
+
+              <!-- LENGAUAJE ESPAÑOL -->
+              <div class="mb-4">
+                <label for="name-common-spa" class="block text-gray-700 font-medium">Nombre Común en Español</label>
+                <input 
+                    type="text" 
+                    id="name-common-spa" 
+                    name="languages.spa" 
+                    class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring focus:ring-blue-200"
+                    placeholder="Ejemplo: spanish"
+                />
+            </div>
+        
+            <!-- Fronteras -->
+            <div class="mb-4">
+                <label for="borders" class="block text-gray-700 font-medium">Fronteras</label>
+                <input 
+                    type="text" 
+                    id="borders" 
+                    name="borders" 
+                    class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring focus:ring-blue-200"
+                    placeholder="Ejemplo: BOL, BRA, CHL"
+                />
+                <small class="text-gray-500">Separar con comas (Ejemplo: BOL, BRA, CHL).</small>
+            </div>
+        
+            <!-- Área -->
+            <div class="mb-4">
+                <label for="area" class="block text-gray-700 font-medium">Área (km²)</label>
+                <input 
+                    type="number" 
+                    id="area" 
+                    name="area" 
+                    class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring focus:ring-blue-200"
+                    placeholder="Ejemplo: 2780400"
+                    min="0" 
+                />
+            </div>
+        
+            <!-- Población -->
+            <div class="mb-4">
+                <label for="population" class="block text-gray-700 font-medium">Población</label>
+                <input 
+                    type="text" 
+                    id="population" 
+                    name="population" 
+                    class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring focus:ring-blue-200"
+                    placeholder="Ejemplo: 45376763"
+                    min="0" 
+                />
+            </div>
+        
+            <!-- Índice Gini -->
+            <div class="mb-4">
+                <label for="gini" class="block text-gray-700 font-medium">Índice Gini (2019)</label>
+                <input 
+                    type="text" 
+                    id="gini" 
+                    name="gini.2019" 
+                    class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring focus:ring-blue-200"
+                    placeholder="Ejemplo: 42.9" 
+                    step="0.1" 
+                    min="0" 
+                    max="100"
+                />
+                <small class="text-gray-500">Debe ser un valor entre 0 y 100.</small>
+            </div>
+        
+            <!-- Botón de envío -->
+            <div class="mt-6">
+                <button 
+                    type="submit" 
+                    class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded focus:outline-none focus:ring focus:ring-blue-300"
+                >
+                    Crear País
+                </button>
+            </div>
+        </form>
+    </section>
+</main>
