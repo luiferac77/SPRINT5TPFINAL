@@ -15,4 +15,5 @@ procesandolos y almacenandolos en una base de datos. Además crear una interfaz 
 - Express-Ejs-Layouts
 - Node-fetch
 - Tailwindcss
-
+# Comando de ejecución
+node app.mjs
